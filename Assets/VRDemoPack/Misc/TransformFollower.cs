@@ -16,6 +16,22 @@ public class TransformFollower : MonoBehaviour
 
 	private float xv, yv, zv;
 
+	void Start()
+	{
+		if (follow == null) return;
+
+		transform.position = follow.position;
+
+		Vector3 followRotation = follow.eulerAngles;
+		Vector3 newRotation = transform.eulerAngles;
+
+		if (!lockX) newRotation.x = followRotation.x;
+		if (!lockY) newRotation.y = followRotation.y;
+		if (!lockZ) newRotation.z = followRotation.z;
+
+        transform.eulerAngles = newRotation;
+	}
+
     void Update()
     {
 

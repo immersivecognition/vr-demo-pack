@@ -33,4 +33,21 @@ public class CamToggle : MonoBehaviour
             cam.SetActive(!cam.activeSelf);
         }
     }
+
+    // Unity switches cam back when loading scenes... this makes sure we view the flying cam after switching or reloading scenes
+    public void ReEnableCam()
+    {
+        if (cam.activeSelf)
+        {
+            StartCoroutine(EnableCamSeq());
+        }
+    }
+
+    IEnumerator EnableCamSeq()
+    {
+        cam.SetActive(false);
+        yield return null;
+        cam.SetActive(true);
+    }
+
 }
