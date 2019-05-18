@@ -6,7 +6,7 @@ A simple way to show off your Unity developed PC VR application avoiding a the s
 
 ## Get started
 
-To use this, don't clone this repository, download the [Release](http://github.com/immersivecognition/vr-demo-pack/) unity package.
+To use this, don't clone this repository, download the [Release](http://github.com/immersivecognition/vr-demo-pack/releases/latest) unity package.
 
 ## Binding the avatar
 
