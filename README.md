@@ -32,11 +32,12 @@ Now we find our VR camera, in this example its the Camera GameObject under the S
 
 Now we link up the Avatar to our tracked VR GameObjects. Expand the Avatar GameObject, and map the "Follow" field in the Transform Follower component to the corresponding tracked VR GameObject. For SteamVR, we will map it to the CameraRig GameObjects - it should look like this:
 
+```
 HeadParent TransformFollower Follow -> CameraRig Camera 
 TorsoParent TransformFollower Follow -> CameraRig Camera 
 LHandParent TransformFollower Follow -> CameraRig Controller (left)
 RHandParent TransformFollower Follow -> CameraRig Controller (right)
-
+```
 For Oculus or other VR SDKs it it will be different but the HeadParent and TorsoParent should be following to the head, LHandParent to the Left Hand, and RHandParent to the Right Hand. 
 
 ![](Media/tutorial-06.gif)
@@ -45,7 +46,7 @@ Feel free to customise the Avatar!
 
 ## Setting up the flying camera
 
-Just add the `FlyingCam` prefab (`VRDemoPack/Prefabs` folder) to your scene! By default it is setup such that pressing F1 enables the flying camera. 
+Just add the `FlyingCam` prefab (`VRDemoPack/Prefabs` folder) to your scene! By default it is setup such that pressing F1 enables the flying camera. Rendering the extra view will obviously incur increased rendering costs so make sure your PC can handle it!
 
 ![](Media/enable-cam.gif)
 
