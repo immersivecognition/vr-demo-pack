@@ -46,7 +46,7 @@ Feel free to customise the Avatar!
 
 ## Setting up the flying camera
 
-Just add the `FlyingCam` prefab (`VRDemoPack/Prefabs` folder) to your scene! By default it is setup such that pressing F1 enables the flying camera. 
+Just add the `FlyingCam` prefab (`VRDemoPack/Prefabs` folder) to your scene! By default it is setup such that pressing F1 enables the flying camera. Rendering the extra view will obviously incur increased rendering costs so make sure your PC can handle it!
 
 ![](Media/enable-cam.gif)
 
