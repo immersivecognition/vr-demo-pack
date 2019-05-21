@@ -30,7 +30,7 @@ Now we find our VR camera, in this example its the Camera GameObject under the S
 
 ![](Media/tutorial-05.PNG)
 
-Now we link up the Avatar to our tracked VR GameObjects. Expand the Avatar GameObject, and map the "Follow" field in the Transform Follower component to the corresponding tracked VR GameObject. For SteamVR, we will map it to the CameraRig GameObjects - it should look like this:
+Now we link up the Avatar to our tracked VR GameObjects. Expand the Avatar GameObject, and map the "Follow" field in the Transform Follower component to the corresponding tracked VR GameObject. The torso is set to loosely follow the head since we can't track the torso directly. For SteamVR, we will map it to the CameraRig GameObjects - it should look like this:
 
 ```
 HeadParent TransformFollower Follow -> CameraRig Camera 
@@ -38,6 +38,7 @@ TorsoParent TransformFollower Follow -> CameraRig Camera
 LHandParent TransformFollower Follow -> CameraRig Controller (left)
 RHandParent TransformFollower Follow -> CameraRig Controller (right)
 ```
+
 For Oculus or other VR SDKs it it will be different but the HeadParent and TorsoParent should be following to the head, LHandParent to the Left Hand, and RHandParent to the Right Hand. 
 
 ![](Media/tutorial-06.gif)
